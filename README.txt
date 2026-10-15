@@ -1,10 +1,10 @@
-FSM Traffic Light Controller (Verilog)
+# FSM Traffic Light Controller (Verilog)
 
 Files:
 1. traffic_light.v      - FSM design module
 2. traffic_light_tb.v   - Testbench for simulation
 
-Simulation notes:
+# Simulation notes:
 - The testbench generates a clock with a 10 ns period.
 - Reset is held high initially, then deasserted after 10 ns.
 - RED lasts 10 clock cycles, GREEN lasts 10 clock cycles, and YELLOW lasts 3 clock cycles.
