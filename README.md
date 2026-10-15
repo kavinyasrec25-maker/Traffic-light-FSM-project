@@ -31,22 +31,24 @@ The design consists of two main modules:
 
 ### 📊 Block Diagram
 
-```text
-       Clock (clk)       Reset (rst)
-            |                 |
-            v                 v
-     +---------------------------+
-     |  Traffic Light Controller |
-     |                           |
-     |       FSM + Counter       |
-     |                           |
-     +-------------+-------------+
-                   |
-          +--------+--------+
-          |        |        |
-          v        v        v
-        RED      GREEN    YELLOW
+```mermaid
+flowchart TD
+    A["Clock (clk)"] --> D["Traffic Light Controller"]
+    B["Reset (rst)"] --> D
+
+    D --> E["RED"]
+    D --> F["GREEN"]
+    D --> G["YELLOW"]
+
+    style A fill:#E8F0FE,stroke:#4285F4,color:#000
+    style B fill:#FCE8E6,stroke:#EA4335,color:#000
+    style D fill:#E8EAED,stroke:#5F6368,color:#000
+    style E fill:#FCE8E6,stroke:#EA4335,color:#000
+    style F fill:#E6F4EA,stroke:#34A853,color:#000
+    style G fill:#FEF7E0,stroke:#FBBC04,color:#000
 ```
+
+
 
 ## 🔢 FSM State Encoding
 
